@@ -10,6 +10,12 @@
 		D80ACFA31EFA847000CA6E39 /* SupportKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D80ACF991EFA847000CA6E39 /* SupportKit.framework */; };
 		D80ACFA81EFA847000CA6E39 /* SupportKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D80ACFA71EFA847000CA6E39 /* SupportKitTests.swift */; };
 		D80ACFAA1EFA847000CA6E39 /* SupportKit.h in Headers */ = {isa = PBXBuildFile; fileRef = D80ACF9C1EFA847000CA6E39 /* SupportKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D80ACFB51EFA891200CA6E39 /* SupportIssue.swift in Sources */ = {isa = PBXBuildFile; fileRef = D80ACFB41EFA891200CA6E39 /* SupportIssue.swift */; };
+		D80ACFB81EFBD3B800CA6E39 /* PaymentIssue.swift in Sources */ = {isa = PBXBuildFile; fileRef = D80ACFB71EFBD3B800CA6E39 /* PaymentIssue.swift */; };
+		D80ACFBA1EFBD3C500CA6E39 /* BugIssue.swift in Sources */ = {isa = PBXBuildFile; fileRef = D80ACFB91EFBD3C500CA6E39 /* BugIssue.swift */; };
+		D80ACFBC1EFBD3D300CA6E39 /* LegalIssue.swift in Sources */ = {isa = PBXBuildFile; fileRef = D80ACFBB1EFBD3D300CA6E39 /* LegalIssue.swift */; };
+		D80ACFBE1EFBD3E400CA6E39 /* FeedbackIssue.swift in Sources */ = {isa = PBXBuildFile; fileRef = D80ACFBD1EFBD3E400CA6E39 /* FeedbackIssue.swift */; };
+		D8AE43AA1EFBF738004F29C4 /* SupportKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8AE43A91EFBF738004F29C4 /* SupportKit.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +35,12 @@
 		D80ACFA21EFA847000CA6E39 /* SupportKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SupportKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D80ACFA71EFA847000CA6E39 /* SupportKitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupportKitTests.swift; sourceTree = "<group>"; };
 		D80ACFA91EFA847000CA6E39 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D80ACFB41EFA891200CA6E39 /* SupportIssue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SupportIssue.swift; sourceTree = "<group>"; };
+		D80ACFB71EFBD3B800CA6E39 /* PaymentIssue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PaymentIssue.swift; path = Types/PaymentIssue.swift; sourceTree = "<group>"; };
+		D80ACFB91EFBD3C500CA6E39 /* BugIssue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BugIssue.swift; path = Types/BugIssue.swift; sourceTree = "<group>"; };
+		D80ACFBB1EFBD3D300CA6E39 /* LegalIssue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LegalIssue.swift; path = Types/LegalIssue.swift; sourceTree = "<group>"; };
+		D80ACFBD1EFBD3E400CA6E39 /* FeedbackIssue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FeedbackIssue.swift; path = Types/FeedbackIssue.swift; sourceTree = "<group>"; };
+		D8AE43A91EFBF738004F29C4 /* SupportKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupportKit.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +83,7 @@
 		D80ACF9B1EFA847000CA6E39 /* SupportKit */ = {
 			isa = PBXGroup;
 			children = (
+				D80ACFB31EFA88D700CA6E39 /* Classes */,
 				D80ACF9C1EFA847000CA6E39 /* SupportKit.h */,
 				D80ACF9D1EFA847000CA6E39 /* Info.plist */,
 			);
@@ -84,6 +97,27 @@
 				D80ACFA91EFA847000CA6E39 /* Info.plist */,
 			);
 			path = SupportKitTests;
+			sourceTree = "<group>";
+		};
+		D80ACFB31EFA88D700CA6E39 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				D80ACFB61EFBD39C00CA6E39 /* Types */,
+				D8AE43A91EFBF738004F29C4 /* SupportKit.swift */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		D80ACFB61EFBD39C00CA6E39 /* Types */ = {
+			isa = PBXGroup;
+			children = (
+				D80ACFB41EFA891200CA6E39 /* SupportIssue.swift */,
+				D80ACFB71EFBD3B800CA6E39 /* PaymentIssue.swift */,
+				D80ACFB91EFBD3C500CA6E39 /* BugIssue.swift */,
+				D80ACFBB1EFBD3D300CA6E39 /* LegalIssue.swift */,
+				D80ACFBD1EFBD3E400CA6E39 /* FeedbackIssue.swift */,
+			);
+			name = Types;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -149,6 +183,7 @@
 					D80ACF981EFA847000CA6E39 = {
 						CreatedOnToolsVersion = 8.3.2;
 						DevelopmentTeam = VV43A4RM8L;
+						LastSwiftMigration = 0830;
 						ProvisioningStyle = Automatic;
 					};
 					D80ACFA11EFA847000CA6E39 = {
@@ -198,6 +233,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D80ACFB81EFBD3B800CA6E39 /* PaymentIssue.swift in Sources */,
+				D80ACFBE1EFBD3E400CA6E39 /* FeedbackIssue.swift in Sources */,
+				D80ACFBC1EFBD3D300CA6E39 /* LegalIssue.swift in Sources */,
+				D80ACFBA1EFBD3C500CA6E39 /* BugIssue.swift in Sources */,
+				D8AE43AA1EFBF738004F29C4 /* SupportKit.swift in Sources */,
+				D80ACFB51EFA891200CA6E39 /* SupportIssue.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -324,6 +365,7 @@
 		D80ACFAE1EFA847000CA6E39 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = VV43A4RM8L;
@@ -336,6 +378,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = uk.dreamr.SupportKit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -343,6 +386,7 @@
 		D80ACFAF1EFA847000CA6E39 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = VV43A4RM8L;
@@ -362,6 +406,7 @@
 		D80ACFB11EFA847000CA6E39 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = VV43A4RM8L;
 				INFOPLIST_FILE = SupportKitTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -374,6 +419,7 @@
 		D80ACFB21EFA847000CA6E39 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = VV43A4RM8L;
 				INFOPLIST_FILE = SupportKitTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -402,6 +448,7 @@
 				D80ACFAF1EFA847000CA6E39 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D80ACFB01EFA847000CA6E39 /* Build configuration list for PBXNativeTarget "SupportKitTests" */ = {
 			isa = XCConfigurationList;
@@ -410,6 +457,7 @@
 				D80ACFB21EFA847000CA6E39 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
