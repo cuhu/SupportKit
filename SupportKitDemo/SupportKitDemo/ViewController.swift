@@ -12,22 +12,18 @@ import SupportKit
 class ViewController: UIViewController {
   // MARK: - Private Members
   
-  var supportKit = SupportKit()
+  var supportKit = SupportKit(contactAddress: "nd@dreamr.uk")
   
   // MARK: - Lifecycle
   
   override func viewDidAppear(_ animated: Bool) {
     super.viewDidAppear(animated)
-    
-    supportKit.add([
-      PaymentIssue(subject: "", body: ""),
-      BugIssue(subject: "", body: ""),
-      LegalIssue(subject: "", body: "")
+
+    supportKit.present([
+      PaymentIssue(),
+      BugIssue(),
+      LegalIssue()
     ])
-    
-    supportKit.present { [weak self] issue in
-      self?.presentSelection(issue)
-    }
   }
   
   // MARK: - Presentation

@@ -9,12 +9,9 @@
 import Foundation
 
 public struct LegalIssue: SupportIssue {
-  public var title = "Terms & Privacy"
-  public var subject: String
-  public var body: String
-  
-  public init(subject: String, body: String) {
-    self.subject = subject
-    self.body = body
-  }
+  public let title = "Terms & Privacy"
+  public let subject = "I would like more legal information."
+  public let body = "Legal Information Body"
+
+  public init() {}
 }

@@ -6,28 +6,32 @@
 //  Copyright © 2017 Nathan Dane. All rights reserved.
 //
 
-import Foundation
 import UIKit
+import MessageUI
 
-public struct SupportKit {
-  // MARK: - Types
+public class SupportKit: NSObject {
   
-  public typealias Callback = ((_ issue: SupportIssue) -> Void)
+  // MARK: - Private members
   
+  private let composer = MFMailComposeViewController()
+
   // MARK: - Public Members
   
   public var issues: [SupportIssue] = []
+  public var contactAddress: String
   public let title: String
   public let message: String
   
   // MARK: - Lifecycle
   
-  public init(title: String, message: String) {
+  public init(contactAddress: String, title: String, message: String) {
+    self.contactAddress = contactAddress
     self.title = title
     self.message = message
   }
   
-  public init() {
+  public init(contactAddress: String) {
+    self.contactAddress = contactAddress
     self.title = "How can we help you?"
     
     if let appName = Bundle.main.infoDictionary?["CFBundleName"] as? String {
@@ -41,24 +45,28 @@ public struct SupportKit {
   
   // MARK: - Issue management
   
-  public mutating func add(_ issue: SupportIssue) {
+  public func add(_ issue: SupportIssue) {
     issues.append(issue)
   }
   
-  public mutating func add(_ issues: [SupportIssue]) {
+  public func add(_ issues: [SupportIssue]) {
     self.issues.append(contentsOf: issues)
   }
   
   // MARK: - Presentation
   
-  public func present(_ from: UIViewController, _ callback: Callback? = nil) {
+  public func present(_ from: UIViewController) {
     let alertController = UIAlertController(title: title, message: message, preferredStyle: .actionSheet)
     
     for issue in issues {
       let action = UIAlertAction(title: issue.title,
                                  style: .default,
                                  handler: { action in
-        callback?(issue)
+        self.composer.setToRecipients([self.contactAddress])
+        self.composer.setSubject(issue.subject)
+        self.composer.setMessageBody(issue.body, isHTML: false)
+        self.composer.mailComposeDelegate = self
+        from.present(self.composer, animated: true)
       })
         
       alertController.addAction(action)
@@ -69,12 +77,26 @@ public struct SupportKit {
   }
   
   @discardableResult
-  public func present(_ callback: Callback? = nil) -> Bool {
+  public func present(_ issues: [SupportIssue]? = nil) -> Bool {
     // Try to determine where to present from
     guard let window = UIApplication.shared.keyWindow,
       let rootViewController = window.rootViewController else { return false }
     
-    present(rootViewController, callback)
+    if let issues = issues {
+      self.issues = issues
+    }
+    
+    present(rootViewController)
     return true
+  }
+}
+
+// MARK: - MFMailComposeViewControllerDelegate
+
+extension SupportKit: MFMailComposeViewControllerDelegate {
+  public func mailComposeController(_ controller: MFMailComposeViewController,
+                                    didFinishWith result: MFMailComposeResult,
+                                    error: Error?) {
+    controller.dismiss(animated: true)
   }
 }

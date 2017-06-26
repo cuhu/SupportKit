@@ -9,12 +9,9 @@
 import Foundation
 
 public struct FeedbackIssue: SupportIssue {
-  public var title = "Leave feedback"
-  public var subject: String
-  public var body: String
-  
-  public init(subject: String, body: String) {
-    self.subject = subject
-    self.body = body
-  }
+  public let title = "Leave feedback"
+  public let subject = "I would like to leave some feedback"
+  public let body = "Feedback Report Body"
+
+  public init() {}
 }

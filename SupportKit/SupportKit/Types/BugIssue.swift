@@ -9,12 +9,9 @@
 import Foundation
 
 public struct BugIssue: SupportIssue {
-  public var title = "Report a bug"
-  public var subject: String
-  public var body: String
+  public let title = "Report a bug"
+  public let subject = "I would like to report a bug"
+  public let body = "Bug report body"
   
-  public init(subject: String, body: String) {
-    self.subject = subject
-    self.body = body
-  }
+  public init() {}
 }

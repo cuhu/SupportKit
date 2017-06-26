@@ -12,8 +12,23 @@
 		D85690021F0101F60072EF11 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D85690001F0101F60072EF11 /* Main.storyboard */; };
 		D85690041F0101F60072EF11 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D85690031F0101F60072EF11 /* Assets.xcassets */; };
 		D85690071F0101F60072EF11 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D85690051F0101F60072EF11 /* LaunchScreen.storyboard */; };
-		D8F58CCA1F01135B0043C763 /* SupportKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8F58CC91F01135B0043C763 /* SupportKit.framework */; };
+		D8F58CD01F013E3C0043C763 /* SupportKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8F58CCF1F013E3C0043C763 /* SupportKit.framework */; };
+		D8F58CD11F013E3C0043C763 /* SupportKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D8F58CCF1F013E3C0043C763 /* SupportKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		D8F58CCE1F013DE00043C763 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				D8F58CD11F013E3C0043C763 /* SupportKit.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		D8568FF91F0101F60072EF11 /* SupportKitDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SupportKitDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -23,7 +38,7 @@
 		D85690031F0101F60072EF11 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D85690061F0101F60072EF11 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D85690081F0101F60072EF11 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D8F58CC91F01135B0043C763 /* SupportKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SupportKit.framework; path = "../../../Library/Developer/Xcode/DerivedData/SupportKit-ezgvvmeicyfbckdusvitrcoyxtzs/Build/Products/Debug-iphonesimulator/SupportKit.framework"; sourceTree = "<group>"; };
+		D8F58CCF1F013E3C0043C763 /* SupportKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SupportKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,7 +46,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D8F58CCA1F01135B0043C763 /* SupportKit.framework in Frameworks */,
+				D8F58CD01F013E3C0043C763 /* SupportKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -71,7 +86,7 @@
 		D856900E1F0102130072EF11 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				D8F58CC91F01135B0043C763 /* SupportKit.framework */,
+				D8F58CCF1F013E3C0043C763 /* SupportKit.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -86,6 +101,7 @@
 				D8568FF51F0101F60072EF11 /* Sources */,
 				D8568FF61F0101F60072EF11 /* Frameworks */,
 				D8568FF71F0101F60072EF11 /* Resources */,
+				D8F58CCE1F013DE00043C763 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);

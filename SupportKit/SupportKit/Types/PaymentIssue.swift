@@ -9,12 +9,9 @@
 import Foundation
 
 public struct PaymentIssue: SupportIssue {
-  public var title = "I have an issue with payments"
-  public var subject: String
-  public var body: String
-  
-  public init(subject: String, body: String) {
-    self.subject = subject
-    self.body = body
-  }
+  public let title = "I have an issue with payments"
+  public let subject = "I'm having an issue with a payment"
+  public let body = "Payment Issue information"
+
+  public init() {}
 }

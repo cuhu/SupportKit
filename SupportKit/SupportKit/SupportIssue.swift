@@ -9,7 +9,9 @@
 import Foundation
 
 public protocol SupportIssue {
-  var title: String { get set }
-  var subject: String { get set }
-  var body: String { get set }
+  var title: String { get }
+  var subject: String { get }
+  var body: String { get }
+  
+  init()
 }
