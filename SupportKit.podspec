@@ -24,7 +24,7 @@ DESC
 s.homepage         = 'https://github.com/dreamr-uk/SupportKit.git'
 # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
 s.license          = { :type => 'MIT', :file => 'LICENSE' }
-s.author           = { 'Ryan Willis' => 'rw@dreamr.uk' }
+s.author           = { 'Nathan Dane' => 'nd@dreamr.uk' }
 s.source           = { :git => 'https://github.com/dreamr-uk/SupportKit.git', :tag => s.version.to_s }
 s.social_media_url = 'https://twitter.com/dreamr'
 
@@ -39,6 +39,6 @@ s.source_files = 'SupportKit/SupportKit/**/*'
 # }
 
 # s.public_header_files = 'Pod/Classes/**/*.h'
-# s.frameworks = 'UIKit', 'MapKit'
+s.frameworks = 'UIKit', 'MessageUI'
 # s.dependency 'AFNetworking', '~> 2.3'
 end
