@@ -1,5 +1,5 @@
 #
-# Be sure to run `pod lib lint DreamrSupportKit.podspec' to ensure this is a
+# Be sure to run `pod lib lint SupportKit.podspec' to ensure this is a
 # valid spec before submitting.
 #
 # Any lines starting with a # are optional, but their use is encouraged
@@ -7,7 +7,7 @@
 #
 
 Pod::Spec.new do |s|
-s.name             = 'SupportKit'
+s.name             = 'DreamrSupportKit'
 s.version          = '1.0.0'
 s.summary          = 'A customer feedback framework'
 
