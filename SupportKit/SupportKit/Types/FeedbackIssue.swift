@@ -8,13 +8,12 @@
 
 import Foundation
 
-struct FeedbackIssue: SupportIssue {
-  var title: String
-  var subject: String
-  var body: String
+public struct FeedbackIssue: SupportIssue {
+  public var title = "Leave feedback"
+  public var subject: String
+  public var body: String
   
-  init(title: String, subject: String, body: String) {
-    self.title = title
+  public init(subject: String, body: String) {
     self.subject = subject
     self.body = body
   }

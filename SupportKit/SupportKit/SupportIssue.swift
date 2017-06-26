@@ -8,10 +8,8 @@
 
 import Foundation
 
-protocol SupportIssue {
+public protocol SupportIssue {
   var title: String { get set }
   var subject: String { get set }
   var body: String { get set }
-  
-  init(title: String, subject: String, body: String)
 }

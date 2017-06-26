@@ -8,13 +8,12 @@
 
 import Foundation
 
-struct LegalIssue: SupportIssue {
-  var title: String
-  var subject: String
-  var body: String
+public struct LegalIssue: SupportIssue {
+  public var title = "Terms & Privacy"
+  public var subject: String
+  public var body: String
   
-  init(title: String, subject: String, body: String) {
-    self.title = title
+  public init(subject: String, body: String) {
     self.subject = subject
     self.body = body
   }
